@@ -8,35 +8,46 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 240 10% 98%;
+    --foreground: 220 15% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 15% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 15% 20%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217 10% 96%;
+    --secondary-foreground: 217 15% 20%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 217 10% 96%;
+    --muted-foreground: 217 15% 46%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 217 10% 96%;
+    --accent-foreground: 217 15% 20%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 217 20% 91%;
+    --input: 217 20% 91%;
+    --ring: 217 91% 60%;
 
-    --radius: 0.5rem;
+    --positive: 120 60% 50%;
+    --neutral: 45 15% 65%;
+    --negative: 0 70% 60%;
+
+    --political-blue: 217 91% 60%;
+    --political-light: 217 30% 95%;
+    --political-gradient: linear-gradient(135deg, hsl(217 91% 60%), hsl(217 91% 70%));
+    
+    --shadow-elegant: 0 4px 20px -4px hsl(217 91% 60% / 0.15);
+    --shadow-soft: 0 2px 10px -2px hsl(220 15% 20% / 0.1);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
