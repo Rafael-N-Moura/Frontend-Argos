@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { MapPin, BarChart3 } from 'lucide-react';
-import PernambucoMap from './PernambucoMap';
 import SentimentMeter from './SentimentMeter';
 import TweetsList from './TweetsList';
 import MediaTopics from './MediaTopics';
@@ -36,7 +35,7 @@ const RadarPolitico = () => {
                 <BarChart3 className="h-6 w-6 text-primary" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-foreground">Radar Político</h1>
+                <h1 className="text-2xl font-bold text-foreground">Argos</h1>
                 <p className="text-sm text-muted-foreground">v2</p>
               </div>
             </div>
@@ -64,18 +63,24 @@ const RadarPolitico = () => {
               </div>
               <p className="text-sm text-muted-foreground mb-6">Visão Geral</p>
               
-              <PernambucoMap 
-                selectedRegion={selectedRegion}
-                onRegionClick={handleRegionClick}
-              />
-              
-              {selectedRegion && (
-                <div className="mt-6 p-4 bg-primary/5 border border-primary/20 rounded-lg">
-                  <p className="text-sm text-primary font-medium">
-                    Região selecionada: {regionNames[selectedRegion]}
-                  </p>
-                </div>
-              )}
+               <div className="space-y-3">
+                {Object.entries(regionNames).map(([regionId, regionName]) => (
+                  <button
+                    key={regionId}
+                    onClick={() => handleRegionClick(regionId)}
+                    className={`w-full p-4 text-left border rounded-lg transition-all duration-300 hover:border-primary/40 ${
+                      selectedRegion === regionId
+                        ? 'bg-primary/10 border-primary text-primary'
+                        : 'bg-background border-border hover:bg-primary/5'
+                    }`}
+                  >
+                    <h4 className="font-medium">{regionName}</h4>
+                    <p className="text-sm text-muted-foreground mt-1">
+                      Clique para analisar
+                    </p>
+                  </button>
+                ))}
+              </div>
             </div>
 
             {/* Instructions */}
@@ -150,10 +155,10 @@ const RadarPolitico = () => {
                     <BarChart3 className="h-8 w-8 text-primary" />
                   </div>
                   <h3 className="text-xl font-semibold text-foreground mb-2">
-                    Bem-vindo ao Radar Político
+                    Bem-vindo ao Argos
                   </h3>
                   <p className="text-muted-foreground">
-                    Selecione uma região no mapa para iniciar sua análise estratégica.
+                    Selecione uma região para iniciar sua análise estratégica.
                   </p>
                 </div>
               </div>
